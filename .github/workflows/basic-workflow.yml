@@ -1,5 +1,7 @@
 name: Basic Build Action
-on: [push]
+on:
+  push:
+  workflow_dispatch:
 
 jobs:
   build:
@@ -11,4 +13,3 @@ jobs:
         npm install
     - name: build docker image
       run: docker build -t basic-node-app .
-        
